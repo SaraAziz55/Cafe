@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Feedback Form</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <style type = "text/css">
+		body {
+	   background-color: #000;
+	   height: 100%;
+       }
+
+	.form-container
+	{
+	background-color: #fff;
+    border-radius: 8px;	
+	}
+
+		</style>
+    </head>
+    <body >
+        <div class="container">
+            <div class="row " style="margin: 50px">
+                <div class="col-md-6 col-md-offset-3 form-container">
+                    <h2>Feedback</h2> 
+                    <p> Please provide your feedback below: </p>
+                    <form role="form" method="post" id="feedbackForm" action = "http://localhost/contact.php">
+					<div class="row">
+                            <div class="col-sm-12 form-group">
+                                <label for="name"> Your Name:</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label for="email"> Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+						<div class="row">
+                            <div class="col-sm-12 form-group">
+                                <label for="comments"> Comments:</label>
+                                <textarea class="form-control" type="textarea" name="comments" id="comments"  maxlength="500" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <label>How do you rate your overall experience?</label>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="experience"  value="bad" >
+                                        Bad 
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="experience"value="average" >
+                                        Average 
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="experience"  value="good" >
+                                        Good 
+                                    </label>
+                                </p>
+                            </div>
+                        </div
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <button type="submit" class="btn btn-lg btn-warning btn-block" >Post </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
