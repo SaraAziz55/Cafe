@@ -1,0 +1,136 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml111.dtd">
+  
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+<title>Place order</title>
+<style type = "text/css">
+body{
+ background-image: url('bg.jpg');
+  
+  background-size: cover;
+  margin-top:50px;
+  color:white;
+}
+#overlay {
+  position: fixed; 
+  display: none; 
+  width: 100%; 
+  height: 100%; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity:0.5;
+  z-index: 2; 
+  
+}
+h2,h3,p{
+text-align:center;
+}
+</style>
+</head>
+<body>
+<div id = "overlay"></div>
+<form  id ="myForm" action = "http://localhost/Cafe/order.php" method = "post" onsubmit="myFunction()">
+<h2>Welcome!</h2>
+<table align="center">
+<tr>
+<td>BUYERS NAME : </td>
+<td><input type = "text" name = "name" size = "15" /></td>
+</tr>
+<tr>
+<td>STREET ADDRESS : </td>
+<td><input type = "text" name = "street" size = "15" /></td>
+</tr>
+<tr>
+<td>CITY : </td>
+<td><input type = "text" name = "city" size = "15" /></td>
+</tr>
+</table>
+<p/>
+<table border = "border" align="center">
+<tr>
+<th>ITEMS</th>
+<th>PRICE</th>
+<th>QUANTITY</th>
+</tr>
+<tr>
+<td>Burger</td>
+<td>Rs.100</td>
+<td align = "center">
+<input type = "text" name = "burger" size = "3"/></td>
+</tr>
+<tr>
+<td>Pizza</td>
+<td>Rs.200</td>
+<td align = "center">
+<input type = "text" name = "pizza" size = "3"/></td>
+</tr>
+<tr>
+<td>Cold coffee</td>
+<td>Rs.50</td>
+<td align = "center">
+<input type = "text" name = "coldcoffee" size = "3"/></td>
+</tr>
+<tr>
+<td>Pasta</td>
+<td>Rs.200</td>
+<td align = "center">
+<input type = "text" name = "pasta" size = "3"/></td>
+</tr>
+<tr>
+<td>Pancake</td>
+<td>Rs.100</td>
+<td align = "center">
+<input type = "text" name = "pancake" size = "3"/></td>
+</tr>
+<tr>
+<td>Noodles</td>
+<td>Rs.200</td>
+<td align = "center">
+<input type = "text" name = "noodles" size = "3"/></td>
+</tr>
+</table>
+<p/>
+<h3>PAYMENT METHOD:</h3>
+<table align="center">
+<tr>
+<td colspan = "2">
+<input type = "radio" name = "payment" value = "VISA" checked = "checked"/>VISA 
+</td>
+</tr>
+<tr>
+<td colspan = "2">
+<input type = "radio" name = "payment" value = "MASTER CARD" />MASTER CARD
+</td> 
+</tr>
+<tr>
+<td colspan = "2">
+<input type = "radio" name = "payment" value = "COD" />COD
+</td>
+</tr> 
+<tr>
+<td colspan = "2">
+<input type = "radio" name = "payment" value = "RUPAY"  />RUPAY
+</td> 
+</tr>
+<tr>
+<td>
+<input type = "submit" value = "Submit order"/>
+</td>
+<td>
+<input type = "reset" value = "Clear order"/>
+</td>
+</tr>
+</table>
+</form>
+<script type = "text/javascript">
+function myFunction() {
+  alert("Your order was submitted\n" + "Will be placed shortly!\n" + "Thank you! for ordering");
+}
+</script>
+
+</body>
+</html>
+
